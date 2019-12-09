@@ -7,6 +7,7 @@
 
 :root {
     --placeholder-color: brown;
+    --active-canvas: white;
 }
 
 body {
@@ -16,6 +17,10 @@ body {
 
 img {
     width: 100%;
+}
+
+.canvas {
+    background-color: var(--active-canvas);
 }
 
 .color {
@@ -35,7 +40,7 @@ img {
     width: 100%;
     height: 100vh;
     grid-template-columns: auto;
-    grid-template-rows: 24% 13% 21% 21% 21%;
+    grid-template-rows: repeat(5, 1fr);
     grid-row-gap: 1px;
     justify-items: center;
 }
@@ -44,7 +49,7 @@ img {
 #grid-first {
     display: grid;
     width: 100%;
-    grid-template-columns: 29% 42% 29%;
+    grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: auto;
     grid-column-gap: 1px;
 }
@@ -52,7 +57,6 @@ img {
 .grid-first-middle {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto auto;
     justify-items: center;
     align-items: center;
     background-color: var(--placeholder-color);
@@ -97,8 +101,9 @@ li {
 #grid-second {
     display: grid;
     width: 100%;
-    grid-template-columns: 20% auto 20%;
+    grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: auto;
+    background-color: var(--placeholder-color);
 }
 
 /*---------------------------------------------------------- */
@@ -106,8 +111,9 @@ li {
 #grid-third {
     display: grid;
     width: 100%;
-    grid-template-columns: 20% 9% 42% 9% 20%;
+    grid-template-columns: 2fr 1fr 4fr 1fr 2fr;
     grid-template-rows: auto;
+    background-color: var(--placeholder-color);
 }
 
 .grid-third-share {
@@ -117,7 +123,7 @@ li {
     text-align: center;
     align-items: center;
     background-color: var(--placeholder-color);
-    grid-template-areas: 
+    grid-template-areas:
         ". . ."
         "share share share"
         ". . .";
@@ -177,12 +183,29 @@ li {
     cursor: pointer;
 }*/
 
+.grid-third-taskbar {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr;
+}
+
+.utility {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+
+.button-collection2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 /*---------------------------------------------------------- */
 /* Fourth Grid */
 #grid-fourth {
     display: grid;
     width: 100%;
-    grid-template-columns: 20% 9% 42% 9% 20%;
+    grid-template-columns: 2fr 1fr 4fr 1fr 2fr;
     grid-template-rows: auto;
 }
 
@@ -191,7 +214,7 @@ li {
 #grid-fifth {
     display: grid;
     width: 100%;
-    grid-template-columns: 20% 9% 42% 9% 20%;
+    grid-template-columns: 2fr 1fr 4fr 1fr 2fr;
     grid-template-rows: auto;
 }
 
@@ -200,7 +223,7 @@ li {
 /* Code By Webdevtrick ( https://webdevtrick.com ) */
 .container {
     position: relative;
-    width: 500px;
+    width: 600px;
     margin: 0 auto;
 }
 
@@ -219,7 +242,7 @@ li {
 }
 
 .slide {
-    height: 70px;
+    height: 100px;
     width: 150px;
     text-align: center;
     cursor: pointer;
