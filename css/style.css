@@ -2,10 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-user-select: none;
 }
 
 :root {
     --placeholder-color: brown;
+}
+
+body {
+    background: #333;
+    -webkit-user-select: none;
 }
 
 img {
@@ -34,10 +40,11 @@ img {
     justify-items: center;
 }
 
+/* First Grid */
 #grid-first {
     display: grid;
     width: 100%;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 29% 42% 29%;
     grid-template-rows: auto;
     grid-column-gap: 1px;
 }
@@ -59,6 +66,13 @@ img {
     justify-items: center;
 }
 
+li {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-decoration: none;
+}
+
 .design-thinking {
     width: 60px;
     height: 60px;
@@ -78,13 +92,17 @@ img {
     background-size: cover;
 }
 
+/*---------------------------------------------------------- */
+/* Second Grid */
 #grid-second {
     display: grid;
     width: 100%;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: 20% auto 20%;
     grid-template-rows: auto;
 }
 
+/*---------------------------------------------------------- */
+/* Third Grid */
 #grid-third {
     display: grid;
     width: 100%;
@@ -92,6 +110,52 @@ img {
     grid-template-rows: auto;
 }
 
+.grid-third-taskplanner {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+}
+
+.overview {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.today {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
+
+#date {
+    line-height: 12px;
+    text-align: left;
+}
+
+#time {
+    font-size: 20px;
+}
+
+.tasks p {
+    font-size: 10px;
+    text-align: left;
+}
+
+/*.button-collection button {
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}*/
+
+/*---------------------------------------------------------- */
+/* Fourth Grid */
 #grid-fourth {
     display: grid;
     width: 100%;
@@ -99,9 +163,84 @@ img {
     grid-template-rows: auto;
 }
 
+/*---------------------------------------------------------- */
+/* Fifth Grid */
 #grid-fifth {
     display: grid;
     width: 100%;
     grid-template-columns: 20% 9% 42% 9% 20%;
     grid-template-rows: auto;
+}
+
+/*---------------------------------------------------------- */
+/* --------------------------------------------------------*/
+/* Code By Webdevtrick ( https://webdevtrick.com ) */
+.container {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.window {
+    overflow: hidden;
+    position: relative;
+    background: #222;
+}
+
+#carousel {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-column-gap: 5px;
+    width: 100%;
+    position: relative;
+}
+
+.slide {
+    height: 70px;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slide#s1 {
+    background: #00c8c8;
+}
+
+.slide#s2 {
+    background: #ff4946;
+}
+
+.slide#s3 {
+    background: #5cb85c;
+}
+
+.slide#s4 {
+    background: #3a559f;
+}
+
+.slide#s5 {
+    background: #ff8500;
+}
+
+#prev,
+#next {
+    cursor: pointer;
+    font-size: 14pt;
+}
+
+.nextprev {
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 10% auto 10%;
+    grid-template-rows: auto;
+}
+
+.transition {
+    transition: .7s;
 }
