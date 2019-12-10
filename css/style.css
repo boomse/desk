@@ -6,42 +6,32 @@
 }
 
 :root {
-    --placeholder-color: brown;
-    --active-canvas: white;
+    --placeholder-color: #212C30;
+    --active-canvas: #EEEEEE;
+    --gap: 5px;
 }
 
 body {
-    background: #333;
+    background-color: var(--active-canvas);
     -webkit-user-select: none;
 }
 
-img {
+.icon {
+    display: grid;
+    justify-items: center;
     width: 100%;
 }
 
-.canvas {
-    background-color: var(--active-canvas);
-}
-
-.color {
-    width: 100%;
-    height: 100%;
-    background-color: var(--placeholder-color);
-}
-
-.color2 {
-    width: 100%;
-    height: 100%;
-    background-color: chocolate;
+.icon img {
+    width: 20%;
 }
 
 #grid-system {
     display: grid;
     width: 100%;
     height: 100vh;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(5, 1fr);
-    grid-row-gap: 1px;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-gap: var(--gap);
     justify-items: center;
 }
 
@@ -49,12 +39,12 @@ img {
 #grid-first {
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: auto;
-    grid-column-gap: 1px;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: var(--gap);
 }
 
-.grid-first-middle {
+.grid-first-two {
     display: grid;
     grid-template-columns: auto;
     justify-items: center;
@@ -62,12 +52,40 @@ img {
     background-color: var(--placeholder-color);
 }
 
-.columns {
+.grid-first-one {
+    background-color: var(--placeholder-color);
+    display: grid;
+    align-items: center;
+}
+
+.grid-first-three {
+    background-image: url(../images/assistant.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--placeholder-color);
+}
+
+.grid-first-four {
+    background-color: var(--placeholder-color);
+}
+
+/*---------------------------------------------------------- */
+/* Second Grid */
+#grid-second {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 3fr;
+    grid-gap: var(--gap);
+}
+
+.grid-second-one {
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: auto auto auto auto auto;
     width: 100%;
     justify-items: center;
+    background-color: var(--placeholder-color);
 }
 
 li {
@@ -84,143 +102,16 @@ li {
     background-color: antiquewhite;
 }
 
-.grid-first-left {
-    background-image: url(../images/hologram.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.grid-first-right {
-    background-image: url(../images/assistant.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/*---------------------------------------------------------- */
-/* Second Grid */
-#grid-second {
+.grid-second-two {
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: auto;
-    background-color: var(--placeholder-color);
-}
-
-/*---------------------------------------------------------- */
-/* Third Grid */
-#grid-third {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 2fr 1fr 4fr 1fr 2fr;
-    grid-template-rows: auto;
-    background-color: var(--placeholder-color);
-}
-
-.grid-third-share {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    text-align: center;
-    align-items: center;
-    background-color: var(--placeholder-color);
-    grid-template-areas:
-        ". . ."
-        "share share share"
-        ". . .";
-}
-
-.share4 {
-    grid-area: share;
-}
-
-.grid-third-taskplanner {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
     justify-items: center;
-}
-
-.overview {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-template-columns: 10% auto 10%;
     grid-template-rows: auto;
-    text-align: center;
-    width: 100%;
+    background-color: var(--placeholder-color);
 }
 
-.today {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
-}
-
-#date {
-    line-height: 12px;
-    text-align: left;
-}
-
-#time {
-    font-size: 20px;
-}
-
-.tasks p {
-    font-size: 10px;
-    text-align: left;
-}
-
-.button-collection {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 0.125em;
-}
-
-/*.button-collection button {
-    border: none;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-}*/
-
-.grid-third-taskbar {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr;
-}
-
-.utility {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    text-align: center;
-}
-
-.button-collection2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-/*---------------------------------------------------------- */
-/* Fourth Grid */
-#grid-fourth {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 2fr 1fr 4fr 1fr 2fr;
-    grid-template-rows: auto;
-}
-
-/*---------------------------------------------------------- */
-/* Fifth Grid */
-#grid-fifth {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 2fr 1fr 4fr 1fr 2fr;
-    grid-template-rows: auto;
-}
-
-/*---------------------------------------------------------- */
-/* --------------------------------------------------------*/
-/* Code By Webdevtrick ( https://webdevtrick.com ) */
 .container {
     position: relative;
     width: 600px;
@@ -278,15 +169,109 @@ li {
     font-size: 14pt;
 }
 
-.nextprev {
-    display: grid;
-    width: 100%;
-    justify-items: center;
-    align-items: center;
-    grid-template-columns: 10% auto 10%;
-    grid-template-rows: auto;
-}
-
 .transition {
     transition: .7s;
 }
+
+.grid-second-three {}
+
+.taskplanner {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    background-color: var(--placeholder-color);
+}
+
+.overview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.today {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
+
+#date {
+    line-height: 12px;
+    text-align: left;
+}
+
+#time {
+    font-size: 20px;
+}
+
+.tasks p {
+    font-size: 10px;
+    text-align: left;
+}
+
+.button-collection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.125em;
+}
+
+.taskbar {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr;
+    background-color: var(--placeholder-color);
+}
+
+.utility {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+
+.button-collection2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.layout-of-canvas {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    height: 100%;
+}
+
+.inactive-zone {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1.5fr;
+}
+
+/*---------------------------------------------------------- */
+/* Third Grid */
+#grid-third {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: var(--gap);
+}
+
+.grid-third-one {
+    background-color: var(--placeholder-color);
+}
+
+.grid-third-two {
+    background-color: var(--placeholder-color);
+}
+
+.grid-third-three {
+    background-color: var(--placeholder-color);
+}
+
+.grid-third-four {
+    background-color: var(--placeholder-color);
+}
+
+/*---------------------------------------------------------- */
+/* --------------------------------------------------------*/
