@@ -1,7 +1,7 @@
 // Code By Webdevtrick ( https://webdevtrick.com )
 var carousel = $('#carousel'),
     threshold = 20,
-    slideWidth = 155,
+    slideWidth = 250,
     dragStart,
     dragEnd;
 
@@ -61,7 +61,7 @@ function clock() {
     var date = d.getDate();
 
     var month = d.getMonth();
-    var montharr = ["Jan", "Feb", "Mar", "April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    var montharr = ["Jan", "Feb", "Mar", "April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "December"];
     month = montharr[month];
 
     var day = d.getDay();
@@ -71,6 +71,11 @@ function clock() {
     var hour = d.getHours();
     var min = d.getMinutes();
 
-    document.getElementById("date").innerHTML = day + " " + date + " " + month + " ";
-    document.getElementById("time").innerHTML = hour + ":" + min + " ";
+    document.getElementById("date").innerHTML = day + " " + date + ", " + month + " ";
+    document.getElementById("time").innerHTML = "<div><p>" + hour + "</p></div> : <div><p>" + min + "</p></div>";
 }
+
+var card = document.querySelector('.grid-first-one');
+card.addEventListener('click', function () {
+    card.classList.toggle('is-flipped');
+});
