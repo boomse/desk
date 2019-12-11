@@ -15,21 +15,39 @@
         <!-------------------------------------------------- First line of the grid -->
         <div id="grid-first">
             <div class="grid-first-one">
-                <div class="icon">
-                    <img src="images/3d-icon.svg">
-                    <p class="icon-tekst">CENTER</p>
+                <div class="flipCard">
+                    <div class="card" onclick="this.classList.toggle('flipped');">
+                        <div class="icon front">
+                            <img src="images/3d-icon.svg">
+                            <p class="icon-tekst">CENTER</p>
+                        </div>
+                        <div class="center-content back">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="grid-first-two">
-                <div class="icon">
-                    <img src="images/share-icon.svg">
-                    <p class="icon-tekst">SHARE LAB</p>
+                <div class="flipCard">
+                    <div class="card" onclick="this.classList.toggle('flipped');">
+                        <div class="icon front">
+                            <img src="images/share-icon.svg">
+                            <p class="icon-tekst">SHARE LAB</p>
+                        </div>
+                        <div class="share-content back">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="grid-first-three">
-                <div class="icon">
-                    <img src="images/notes-icon.svg">
-                    <p class="icon-tekst">NOTES</p>
+                <div class="flipCard">
+                    <div class="card" onclick="this.classList.toggle('flipped');">
+                        <div class="icon front">
+                            <img src="images/notes-icon.svg">
+                            <p class="icon-tekst">NOTES</p>
+                        </div>
+                        <div class="note-content back">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="grid-first-four">
@@ -39,30 +57,38 @@
         <!--------------------------------------------------- Second line of the grid -->
         <div id="grid-second">
             <div class="damn">
-                <div class="grid-second-one">
-                    <div class="design-thinking">
-                        <div class="design-thinking-text">
-                            <p>Empathize</p>
+                <div class="flipCard">
+                    <div class="card" onclick="this.classList.toggle('flipped');">
+                        <div class="icon front">
+                            <p></p>
+                            <p class="icon-tekst">PROJECT TIMELINE</p>
                         </div>
-                    </div>
-                    <div class="design-thinking">
-                        <div class="design-thinking-text">
-                            <p>Define</p>
-                        </div>
-                    </div>
-                    <div class="design-thinking">
-                        <div class="design-thinking-text">
-                            <p>Ideate</p>
-                        </div>
-                    </div>
-                    <div class="design-thinking">
-                        <div class="design-thinking-text">
-                            <p>Prototype</p>
-                        </div>
-                    </div>
-                    <div class="design-thinking">
-                        <div class="design-thinking-text">
-                            <p>Test</p>
+                        <div class="grid-second-one back">
+                            <div class="design-thinking">
+                                <div class="design-thinking-text">
+                                    <p>Empathize</p>
+                                </div>
+                            </div>
+                            <div class="design-thinking">
+                                <div class="design-thinking-text">
+                                    <p>Define</p>
+                                </div>
+                            </div>
+                            <div class="design-thinking">
+                                <div class="design-thinking-text">
+                                    <p>Ideate</p>
+                                </div>
+                            </div>
+                            <div class="design-thinking">
+                                <div class="design-thinking-text">
+                                    <p>Prototype</p>
+                                </div>
+                            </div>
+                            <div class="design-thinking">
+                                <div class="design-thinking-text">
+                                    <p>Test</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -84,35 +110,52 @@
             </div>
             <div class="grid-second-three">
                 <div class="inactive-zone">
-                    <div class="taskplanner">
-                        <div class="taskplanner-category">
-                            <img class="help" src="images/arrow-icon.svg">
-                            <p>Today</p>
-                            <img class="opposite" src="images/arrow-icon.svg">
-                        </div>
-                        <div class="today">
-                            <p id="date"></p>
-                            <div class="weather">
-                                <img src="images/cloud-icon.svg">
-                                <p>Partly Cloudy conditions with 29 kph winds from the west. The high will be 7º. Clear tonight with a low -2º.</p>
+                    <div class="flipCard">
+                        <div class="card" onclick="this.classList.toggle('flipped');">
+                            <div class="icon front">
+                                <img src="images/tasks-icon.svg">
+                                <p class="icon-tekst">TASKS</p>
                             </div>
-                            <div id="time"></div>
+                            <div class="taskplanner back">
+                                <div class="taskplanner-category">
+                                    <img class="help" src="images/arrow-icon.svg">
+                                    <p>Today</p>
+                                    <img class="opposite" src="images/arrow-icon.svg">
+                                </div>
+                                <div class="today">
+                                    <p id="date"></p>
+                                    <div class="weather">
+                                        <img src="images/cloud-icon.svg">
+                                        <p>Partly Cloudy conditions with 29 kph winds from the west. The high will be 7º. Clear tonight with a low -2º.</p>
+                                    </div>
+                                    <div id="time"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="zone">
                     </div>
                 </div>
                 <div class="canvas">
+                    <p>[ Open a program from the timeline to get started ]</p>
                 </div>
                 <div class="inactive-zone">
-                    <div class="damn">
-                        <div class="taskbar">
-                            <img src="images/toggle-bar-icon.svg">
-                            <img src="images/volume-icon.svg">
-                            <img src="images/info-icon.svg">
-                            <img src="images/web-icon.svg">
-                            <img src="images/keyboard-icon.svg">
-                            <img src="images/wifi-icon.svg">
+                    <div class="flipCard">
+                        <div class="card" onclick="this.classList.toggle('flipped');">
+                            <div class="icon front">
+                                <img src="images/utility-icon.svg">
+                                <p class="icon-tekst">UTILITIES</p>
+                            </div>
+                            <div class="damn">
+                                <div class="taskbar">
+                                    <img src="images/toggle-bar-icon.svg">
+                                    <img src="images/volume-icon.svg">
+                                    <img src="images/info-icon.svg">
+                                    <img src="images/web-icon.svg">
+                                    <img src="images/keyboard-icon.svg">
+                                    <img src="images/wifi-icon.svg">
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="zone">
@@ -124,27 +167,51 @@
         <!------------------------------------------------------ Third line of the grid -->
         <div id="grid-third">
             <div class="grid-third-one">
-                <div class="icon">
-                    <img src="images/assistant-icon.svg">
-                    <p class="icon-tekst">DESK ASSISTANT</p>
+                <div class="flipCard">
+                    <div class="card" onclick="this.classList.toggle('flipped');">
+                        <div class="icon front">
+                            <img src="images/assistant-icon.svg">
+                            <p class="icon-tekst">DESK ASSISTANT</p>
+                        </div>
+                        <div class="assistant-content back">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="grid-third-two">
-                <div class="icon">
-                    <img src="images/libraries-icon.svg">
-                    <p class="icon-tekst">LIBRARIES</p>
+                <div class="flipCard">
+                    <div class="card" onclick="this.classList.toggle('flipped');">
+                        <div class="icon front">
+                            <img src="images/libraries-icon.svg">
+                            <p class="icon-tekst">LIBRARIES</p>
+                        </div>
+                        <div class="libraries-content back">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="grid-third-three">
-                <div class="icon">
-                    <img src="images/files-icons.svg">
-                    <p class="icon-tekst">FILES</p>
+                <div class="flipCard">
+                    <div class="card" onclick="this.classList.toggle('flipped');">
+                        <div class="icon front">
+                            <img src="images/files-icons.svg">
+                            <p class="icon-tekst">FILES</p>
+                        </div>
+                        <div class="files-content back">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="grid-third-four">
-                <div class="icon">
-                    <img src="images/apps-icon.svg">
-                    <p class="icon-tekst">APPS</p>
+                <div class="flipCard">
+                    <div class="card" onclick="this.classList.toggle('flipped');">
+                        <div class="icon front">
+                            <img src="images/apps-icon.svg">
+                            <p class="icon-tekst">APPS</p>
+                        </div>
+                        <div class="apps-content back">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
