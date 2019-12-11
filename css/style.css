@@ -13,30 +13,8 @@
 }
 
 body {
-    background-color: white;
+    background-color: #242426;
     -webkit-user-select: none;
-}
-
-.icon {
-    display: grid;
-    justify-items: center;
-    width: 100%;
-    grid-gap: 20px;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.icon img {
-    width: 20%;
-}
-
-.icon-tekst {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-    background: linear-gradient(to right, #FFAD54, #FFCC80, #80CBC4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 #grid-system {
@@ -46,6 +24,10 @@ body {
     grid-template-columns: 1fr 3fr 1fr;
     grid-gap: var(--gap);
     justify-items: center;
+}
+
+#grid-first > *:not(:last-child), #grid-second > *:not(:last-child), #grid-third > *, .taskplanner, .canvas, .damn {
+    border: 1px solid #FFAD54;
 }
 
 /* First Grid */
@@ -76,9 +58,96 @@ body {
 }
 
 .grid-first-four {
-    background-color: var(--placeholder-color);
+    background-color: #242426;
     display: grid;
     align-items: center;
+}
+
+.flipCard {
+    -webkit-perspective: 1000px;
+    -ms-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -o-perspective: 1000px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.flipCard .card.flipped {
+    transform: rotatey(-180deg);
+    -ms-transform: rotatey(-180deg);
+    /* IE 9 */
+    -moz-transform: rotatey(-180deg);
+    /* Firefox */
+    -webkit-transform: rotatey(-180deg);
+    /* Safari and Chrome */
+    -o-transform: rotatey(-180deg);
+    /* Opera */
+}
+
+.flipCard .card {
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 0.5s;
+    -moz-transform-style: preserve-3d;
+    -moz-transition: 0.5s;
+    -ms-transform-style: preserve-3d;
+    -ms-transition: 0.5s;
+    -o-transform-style: preserve-3d;
+    -o-transition: 0.5s;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    display: grid;
+    align-items: center;
+}
+
+.flipCard .card .icon {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+    backface-visibility: hidden;
+    /* W3C */
+    -webkit-backface-visibility: hidden;
+    /* Safari & Chrome */
+    -moz-backface-visibility: hidden;
+    /* Firefox */
+    -ms-backface-visibility: hidden;
+    /* Internet Explorer */
+    -o-backface-visibility: hidden;
+    /* Opera */
+    overflow: hidden;
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    background-color: var(--placeholder-color);
+}
+
+.icon img {
+    width: 20%;
+    align-self: end;
+}
+
+.icon-tekst {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    background: linear-gradient(to right, #FFAD54, #FFCC80, #80CBC4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.flipCard .card .back {
+    transform: rotatey(-180deg);
+    -ms-transform: rotatey(-180deg);
+    /* IE 9 */
+    -moz-transform: rotatey(-180deg);
+    /* Firefox */
+    -webkit-transform: rotatey(-180deg);
+    /* Safari and Chrome */
+    -o-transform: rotatey(-180deg);
+    /* Opera */
 }
 
 /*---------------------------------------------------------- */
@@ -95,6 +164,7 @@ body {
     display: grid;
     place-items: center;
     background-color: var(--placeholder-color);
+    height: 100%;
 }
 
 .grid-second-one {
@@ -211,6 +281,7 @@ body {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 1fr 1.5fr;
+    grid-row-gap: 5px;
 }
 
 .taskplanner {
@@ -219,6 +290,7 @@ body {
     grid-template-rows: 1fr 3fr;
     justify-items: center;
     align-items: start;
+    height: 100%;
     background-color: var(--placeholder-color);
 }
 
@@ -323,11 +395,18 @@ body {
 }
 
 .canvas {
-    background-color: var(--active-canvas);
+    background-color: var(--placeholder-color);
+    background-image: url(../images/line.svg);
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: white;
 }
 
 .zone {
-    background-color: var(--active-canvas);
+    background-color: #17171A;
 }
 
 /*---------------------------------------------------------- */
