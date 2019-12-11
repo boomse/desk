@@ -74,3 +74,14 @@ function clock() {
     document.getElementById("date").innerHTML = day + " " + date + ", " + month + " ";
     document.getElementById("time").innerHTML = "<div><p>" + hour + "</p></div> : <div><p>" + min + "</p></div>";
 }
+
+function hide() {
+    var element = document.getElementById("grid-first");
+    element.classList.toggle("focus-mode");
+    
+    var element = document.getElementById("damnit");
+    element.classList.toggle("focus-mode");
+    
+    var element = document.getElementById("grid-third");
+    element.classList.toggle("focus-mode");
+}
