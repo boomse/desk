@@ -17,6 +17,10 @@ body {
     -webkit-user-select: none;
 }
 
+.focus-mode {
+    visibility: hidden;
+}
+
 #grid-system {
     display: grid;
     width: 100%;
@@ -31,7 +35,8 @@ body {
 #grid-third > *,
 .taskplanner,
 .canvas,
-.damn {
+.damn,
+#damnit {
     border: 1px solid #FFAD54;
 }
 
@@ -214,6 +219,13 @@ body {
     grid-template-columns: auto;
     grid-template-rows: 0.75fr 1fr 3fr;
     grid-gap: var(--gap);
+}
+
+#damnit {
+    display: grid;
+    place-items: center;
+    background-color: var(--placeholder-color);
+    height: 100%;
 }
 
 .damn {
