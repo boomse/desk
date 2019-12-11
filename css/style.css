@@ -26,8 +26,64 @@ body {
     justify-items: center;
 }
 
-#grid-first > *:not(:last-child), #grid-second > *:not(:last-child), #grid-third > *, .taskplanner, .canvas, .damn {
+#grid-first > *:not(:last-child),
+#grid-second > *:not(:last-child),
+#grid-third > *,
+.taskplanner,
+.canvas,
+.damn {
     border: 1px solid #FFAD54;
+}
+
+.assistant-content img {
+    width: 20%;
+    align-self: end;
+}
+
+.assistant-content {
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    grid-template-columns: auto;
+    grid-template-rows: 2fr 1fr 2fr;
+    height: 80%;
+}
+
+.assistant-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: white;
+}
+
+.center-content {
+    display: grid;
+    width: 100%;
+    place-items: center;
+}
+
+.center-content img {
+    width: 90%;
+}
+
+.share-content {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 3fr 1fr;
+    place-items: center;
+}
+
+.share-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    background: linear-gradient(to right, #FFAD54, #FFCC80, #80CBC4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.share-content img {
+    width: 40%;
 }
 
 /* First Grid */
@@ -380,18 +436,33 @@ body {
     height: 38px;
 }
 
+.taskcollection {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    grid-gap: 15px;
+    height: 100%;
+}
+
 .taskbar {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     place-items: center;
-    margin: 0 auto;
-    width: 80%;
-    height: 70%;
+}
+
+.taskbar-semiotics {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    color: white;
 }
 
 .taskbar img {
-    width: 40%;
+    align-self: start;
+    width: 50%;
 }
 
 .canvas {
