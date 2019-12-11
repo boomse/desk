@@ -74,8 +74,3 @@ function clock() {
     document.getElementById("date").innerHTML = day + " " + date + ", " + month + " ";
     document.getElementById("time").innerHTML = "<div><p>" + hour + "</p></div> : <div><p>" + min + "</p></div>";
 }
-
-var card = document.querySelector('.grid-first-one');
-card.addEventListener('click', function () {
-    card.classList.toggle('is-flipped');
-});
