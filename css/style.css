@@ -13,7 +13,7 @@
 }
 
 body {
-    background-color: var(--active-canvas);
+    background-color: white;
     -webkit-user-select: none;
 }
 
@@ -57,10 +57,6 @@ body {
     grid-gap: var(--gap);
 }
 
-.flipping {
-    perspective: 600px;
-}
-
 .grid-first-two {
     background-color: var(--placeholder-color);
     display: grid;
@@ -71,16 +67,6 @@ body {
     background-color: var(--placeholder-color);
     display: grid;
     align-items: center;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-}
-
-.grid-first-one.is-flipped {
-    transform: rotateY(180deg);
-}
-
-.back {
-    transform: rotateY(180deg);
 }
 
 .grid-first-three {
@@ -218,6 +204,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 6fr 1fr;
     height: 100%;
+    grid-gap: var(--gap);
 }
 
 .inactive-zone {
@@ -333,6 +320,14 @@ body {
 
 .taskbar img {
     width: 40%;
+}
+
+.canvas {
+    background-color: var(--active-canvas);
+}
+
+.zone {
+    background-color: var(--active-canvas);
 }
 
 /*---------------------------------------------------------- */
