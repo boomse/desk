@@ -9,6 +9,7 @@
     --placeholder-color: #212C30;
     --active-canvas: #EEEEEE;
     --gap: 5px;
+    --secondary-color: #FFCC80;
 }
 
 body {
@@ -20,10 +21,22 @@ body {
     display: grid;
     justify-items: center;
     width: 100%;
+    grid-gap: 20px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .icon img {
     width: 20%;
+}
+
+.icon-tekst {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    background: linear-gradient(to right, #FFAD54, #FFCC80, #80CBC4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #grid-system {
@@ -44,29 +57,42 @@ body {
     grid-gap: var(--gap);
 }
 
+.flipping {
+    perspective: 600px;
+}
+
 .grid-first-two {
-    display: grid;
-    grid-template-columns: auto;
-    justify-items: center;
-    align-items: center;
     background-color: var(--placeholder-color);
+    display: grid;
+    align-items: center;
 }
 
 .grid-first-one {
     background-color: var(--placeholder-color);
     display: grid;
     align-items: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.grid-first-one.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.back {
+    transform: rotateY(180deg);
 }
 
 .grid-first-three {
-    background-image: url(../images/assistant.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
     background-color: var(--placeholder-color);
+    display: grid;
+    align-items: center;
 }
 
 .grid-first-four {
     background-color: var(--placeholder-color);
+    display: grid;
+    align-items: center;
 }
 
 /*---------------------------------------------------------- */
@@ -75,31 +101,48 @@ body {
     display: grid;
     width: 100%;
     grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr 3fr;
+    grid-template-rows: 0.75fr 1fr 3fr;
     grid-gap: var(--gap);
+}
+
+.damn {
+    display: grid;
+    place-items: center;
+    background-color: var(--placeholder-color);
 }
 
 .grid-second-one {
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: auto auto auto auto auto;
-    width: 100%;
-    justify-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    width: 55%;
+    margin: 0 auto;
     background-color: var(--placeholder-color);
 }
 
-li {
+.design-thinking {
+    background: linear-gradient(to right, #FFAD54, #FFCC80, #80CBC4);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 1px;
     display: grid;
-    justify-items: center;
-    align-items: center;
-    text-decoration: none;
+    place-items: center;
 }
 
-.design-thinking {
-    width: 60px;
-    height: 60px;
+.design-thinking-text {
+    background-color: var(--placeholder-color);
+    width: 96px;
+    height: 96px;
     border-radius: 50%;
-    background-color: antiquewhite;
+    display: grid;
+    place-items: center;
+}
+
+.design-thinking-text p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: white;
 }
 
 .grid-second-two {
@@ -107,34 +150,33 @@ li {
     width: 100%;
     justify-items: center;
     align-items: center;
-    grid-template-columns: 10% auto 10%;
+    grid-template-columns: 1fr 4fr 1fr;
     grid-template-rows: auto;
     background-color: var(--placeholder-color);
 }
 
 .container {
     position: relative;
-    width: 600px;
+    width: 100%;
     margin: 0 auto;
 }
 
 .window {
     overflow: hidden;
     position: relative;
-    background: #222;
 }
 
 #carousel {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    grid-column-gap: 5px;
-    width: 100%;
+    grid-column-gap: 50px;
+    width: 200px;
     position: relative;
 }
 
 .slide {
     height: 100px;
-    width: 150px;
+    width: 200px;
     text-align: center;
     cursor: pointer;
     float: left;
@@ -143,99 +185,36 @@ li {
     justify-content: center;
 }
 
-.slide#s1 {
-    background: #00c8c8;
-}
-
-.slide#s2 {
-    background: #ff4946;
-}
-
-.slide#s3 {
-    background: #5cb85c;
-}
-
-.slide#s4 {
-    background: #3a559f;
-}
-
+.slide#s1,
+.slide#s2,
+.slide#s3,
+.slide#s4,
 .slide#s5 {
-    background: #ff8500;
+    background-color: var(--placeholder-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: white;
 }
 
 #prev,
 #next {
     cursor: pointer;
-    font-size: 14pt;
+}
+
+#prev img,
+#next img {
+    width: 40%;
+}
+
+#next {
+    transform: rotateY(180deg)
 }
 
 .transition {
     transition: .7s;
 }
 
-.grid-second-three {}
-
-.taskplanner {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
-    justify-items: center;
-    background-color: var(--placeholder-color);
-}
-
-.overview {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    text-align: center;
-    width: 100%;
-}
-
-.today {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
-}
-
-#date {
-    line-height: 12px;
-    text-align: left;
-}
-
-#time {
-    font-size: 20px;
-}
-
-.tasks p {
-    font-size: 10px;
-    text-align: left;
-}
-
-.button-collection {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 0.125em;
-}
-
-.taskbar {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr;
-    background-color: var(--placeholder-color);
-}
-
-.utility {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    text-align: center;
-}
-
-.button-collection2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.layout-of-canvas {
+.grid-second-three {
     display: grid;
     grid-template-columns: 1fr 6fr 1fr;
     height: 100%;
@@ -245,6 +224,115 @@ li {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 1fr 1.5fr;
+}
+
+.taskplanner {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 3fr;
+    justify-items: center;
+    align-items: start;
+    background-color: var(--placeholder-color);
+}
+
+.taskplanner-category {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    grid-gap: 20px;
+    margin: 20px 0 20px;
+}
+
+.taskplanner-category p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    color: var(--secondary-color);
+}
+
+.taskplanner-category img {
+    width: 15%;
+}
+
+.help {
+    justify-self: end;
+}
+
+.opposite {
+    justify-self: start;
+    transform: rotateY(180deg)
+}
+
+.today {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 1fr;
+    place-items: center;
+    grid-gap: 5px;
+}
+
+#date {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: var(--secondary-color);
+    font-weight: medium;
+}
+
+.weather {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    justify-items: center;
+}
+
+.weather p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5px;
+    color: white;
+}
+
+.weather img {
+    width: 30%;
+}
+
+#time {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #FFAD54;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+}
+
+#time div {
+    display: grid;
+    place-items: center;
+    background: linear-gradient(to right, #FFAD54, #FFCC80, #80CBC4);
+    top: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+#time div p {
+    display: grid;
+    place-items: center;
+    background-color: var(--placeholder-color);
+    width: 38px;
+    height: 38px;
+}
+
+.taskbar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    place-items: center;
+    margin: 0 auto;
+    width: 80%;
+    height: 70%;
+}
+
+.taskbar img {
+    width: 40%;
 }
 
 /*---------------------------------------------------------- */
@@ -259,18 +347,26 @@ li {
 
 .grid-third-one {
     background-color: var(--placeholder-color);
+    display: grid;
+    align-items: center;
 }
 
 .grid-third-two {
     background-color: var(--placeholder-color);
+    display: grid;
+    align-items: center;
 }
 
 .grid-third-three {
     background-color: var(--placeholder-color);
+    display: grid;
+    align-items: center;
 }
 
 .grid-third-four {
     background-color: var(--placeholder-color);
+    display: grid;
+    align-items: center;
 }
 
 /*---------------------------------------------------------- */
