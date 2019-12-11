@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/58e76362c9.js" crossorigin="anonymous"></script>
 </head>
 
@@ -13,34 +14,66 @@
     <div id="grid-system">
         <!-------------------------------------------------- First line of the grid -->
         <div id="grid-first">
-            <div class="grid-first-one">
-                <div class="icon">
-                    <img src="images/3d-icon.svg">
-                    <p class="icon-tekst">CENTER</p>
+            <div class="flipping">
+                <div class="grid-first-one">
+                    <div class="icon">
+                        <img src="images/3d-icon.svg">
+                        <p class="icon-tekst">CENTER</p>
+                    </div>
+                    <div class="back">
+                        <p>wooaa</p>
+                    </div>
                 </div>
             </div>
             <div class="grid-first-two">
-                <h3>Sharelab</h3>
+                <div class="icon">
+                    <img src="images/share-icon.svg">
+                    <p class="icon-tekst">SHARE LAB</p>
+                </div>
             </div>
             <div class="grid-first-three">
-                <h3>Notes</h3>
+                <div class="icon">
+                    <img src="images/notes-icon.svg">
+                    <p class="icon-tekst">NOTES</p>
+                </div>
             </div>
             <div class="grid-first-four">
-                <h3>personal</h3>
             </div>
         </div>
         <!------------------------------- -->
         <!--------------------------------------------------- Second line of the grid -->
         <div id="grid-second">
-            <div class="grid-second-one">
-                <li class="design-thinking">text</li>
-                <li class="design-thinking">text</li>
-                <li class="design-thinking">text</li>
-                <li class="design-thinking">text</li>
-                <li class="design-thinking">text</li>
+            <div class="damn">
+                <div class="grid-second-one">
+                    <div class="design-thinking">
+                        <div class="design-thinking-text">
+                            <p>Empathize</p>
+                        </div>
+                    </div>
+                    <div class="design-thinking">
+                        <div class="design-thinking-text">
+                            <p>Define</p>
+                        </div>
+                    </div>
+                    <div class="design-thinking">
+                        <div class="design-thinking-text">
+                            <p>Ideate</p>
+                        </div>
+                    </div>
+                    <div class="design-thinking">
+                        <div class="design-thinking-text">
+                            <p>Prototype</p>
+                        </div>
+                    </div>
+                    <div class="design-thinking">
+                        <div class="design-thinking-text">
+                            <p>Test</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="grid-second-two">
-                <span id="prev">PREV</span>
+                <span id="prev"><img src="images/arrow-icon.svg"></span>
                 <div class="container">
                     <div class="window">
                         <div id="carousel">
@@ -52,57 +85,45 @@
                         </div>
                     </div>
                 </div>
-                <span id="next">NEXT</span>
+                <span id="next"><img src="images/arrow-icon.svg"></span>
             </div>
             <div class="grid-second-three">
-                <div class="layout-of-canvas">
-                    <div class="inactive-zone">
-                        <div class="taskplanner">
-                            <h3>Task Planner</h3>
-                            <div class="overview">
-                                <div class="today">
-                                    <p id="date"></p>
-                                    <p id="time"></p>
-                                </div>
-                                <div class="tasks">
-                                    <p>Tasks for today</p>
-                                    <p>-Effing die</p>
-                                    <p>-Help</p>
-                                    <p>-Life Crisis</p>
-                                    <p>-Holiday pls</p>
-                                </div>
-                            </div>
-                            <div class="button-collection">
-                                <button>Today</button>
-                                <button>Calender</button>
-                                <button>Tasks</button>
-                                <button>Notifications</button>
-                            </div>
+                <div class="inactive-zone">
+                    <div class="taskplanner">
+                        <div class="taskplanner-category">
+                            <img class="help" src="images/arrow-icon.svg">
+                            <p>Today</p>
+                            <img class="opposite" src="images/arrow-icon.svg">
                         </div>
-                        <div class="zone">
-                            <h3>Zone</h3>
+                        <div class="today">
+                            <p id="date"></p>
+                            <div class="weather">
+                                <img src="images/cloud-icon.svg">
+                                <p>Partly Cloudy conditions with 29 kph winds from the west. The high will be 7º. Clear tonight with a low -2º.</p>
+                            </div>
+                            <div id="time"></div>
                         </div>
                     </div>
-                    <div class="canvas">
-                        <h3>canvas</h3>
+                    <div class="zone">
+                        <h3>Zone</h3>
                     </div>
-                    <div class="inactive-zone">
+                </div>
+                <div class="canvas">
+                    <h3>canvas</h3>
+                </div>
+                <div class="inactive-zone">
+                    <div class="damn">
                         <div class="taskbar">
-                            <div class="utility">
-                                <i class="fas fa-volume-down"></i>
-                                <i class="fas fa-wifi"></i>
-                                <i class="fas fa-keyboard"></i>
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <div class="button-collection2">
-                                <button>Private Mode</button>
-                                <button>Focus Mode</button>
-                                <button>Mute</button>
-                            </div>
+                            <img src="images/toggle-bar-icon.svg">
+                            <img src="images/volume-icon.svg">
+                            <img src="images/info-icon.svg">
+                            <img src="images/web-icon.svg">
+                            <img src="images/keyboard-icon.svg">
+                            <img src="images/wifi-icon.svg">
                         </div>
-                        <div class="zone">
-                            <h3>Zone</h3>
-                        </div>
+                    </div>
+                    <div class="zone">
+                        <h3>Zone</h3>
                     </div>
                 </div>
             </div>
@@ -111,16 +132,28 @@
         <!------------------------------------------------------ Third line of the grid -->
         <div id="grid-third">
             <div class="grid-third-one">
-                <h3>Desk Assistant</h3>
+                <div class="icon">
+                    <img src="images/assistant-icon.svg">
+                    <p class="icon-tekst">DESK ASSISTANT</p>
+                </div>
             </div>
             <div class="grid-third-two">
-                <h3>libraries</h3>
+                <div class="icon">
+                    <img src="images/libraries-icon.svg">
+                    <p class="icon-tekst">LIBRARIES</p>
+                </div>
             </div>
             <div class="grid-third-three">
-                <h3>files</h3>
+                <div class="icon">
+                    <img src="images/files-icons.svg">
+                    <p class="icon-tekst">FILES</p>
+                </div>
             </div>
             <div class="grid-third-four">
-                <h3>Apps</h3>
+                <div class="icon">
+                    <img src="images/apps-icon.svg">
+                    <p class="icon-tekst">APPS</p>
+                </div>
             </div>
         </div>
         <!------------------------------- -->
